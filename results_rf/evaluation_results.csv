@@ -1,0 +1,4 @@
+Dataset,Accuracy,F1 Score,Demographic Parity Diff.
+Adult Income,0.837,0.8306374700910845,1.0
+Credit-G,0.73,0.7061201501877347,1.0
+Bank Marketing,0.888,0.8581893648895669,1.0
