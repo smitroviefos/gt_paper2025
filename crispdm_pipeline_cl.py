@@ -134,7 +134,7 @@ class CRISP_DM:
         with open("results_rf/shap_clusters.txt", "r", encoding="utf-8") as f:
             shap_clusters = f.read()
 
-        print("📊 SHAP klasifikacija značajki po igračima:")
+        print("SHAP klasifikacija značajki po igračima:")
         print(shap_clusters)   
 
 # === GLAVNI PROGRAM ===
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     crisp_dm = CRISP_DM()
 
     for name, data_id, target in datasets:
-        print(f"\n📊 Dataset: {name} (ID: {data_id})")
+        print(f"\nDataset: {name} (ID: {data_id})")
         try:
             X, y, _, uniques = crisp_dm.load_prepare_dataset(data_id, target)
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -172,7 +172,7 @@ if __name__ == "__main__":
             crisp_dm.shap_classification[name] = shap_result
 
         except Exception as e:
-            print(f"❌ Error in dataset {name}: {e}")
+            print(f"Error in dataset {name}: {e}")
             crisp_dm.results.append({
                 "Dataset": name,
                 "Accuracy": None,
